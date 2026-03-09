@@ -1,7 +1,25 @@
 # User Management API 👤
 
-Este projeto consiste em uma API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
-O objetivo é praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados.
+![Java](https://img.shields.io/badge/Java-17-orange)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen)
+![Spring Data JPA](https://img.shields.io/badge/Spring%20Data-JPA-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
+![Maven](https://img.shields.io/badge/Maven-Build-red)
+
+API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
+Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados.
+
+---
+
+## 🚀 Tecnologias
+
+- Java 17
+- Spring Boot
+- Spring Web
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
 
 ---
 
@@ -19,7 +37,7 @@ O objetivo é praticar a construção de **APIs backend organizadas**, utilizand
 ### 🔹 Estrutura da Aplicação
 - Organização em camadas (Controller, Service, Repository)
 - Separação de responsabilidades
-- Estrutura padrão de projeto Spring Boot
+- Estrutura padrão de projetos Spring Boot
 
 ---
 
