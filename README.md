@@ -11,7 +11,7 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 
 ---
 
-## 🚀 Tecnologias
+# 🚀 Tecnologias
 
 - Java 17
 - Spring Boot
@@ -23,9 +23,10 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 
 ---
 
-## 📚 Conteúdos
+# 📚 Funcionalidades
 
 ### 🔹 Gerenciamento de Usuários
+
 - Criação de usuários
 - Listagem de usuários
 - Busca de usuário por ID
@@ -34,14 +35,99 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 
 ---
 
-### 🔹 Estrutura da Aplicação
-- Organização em camadas (Controller, Service, Repository)
-- Separação de responsabilidades
-- Estrutura padrão de projetos Spring Boot
+# 🔗 Endpoints da API
+
+| Método | Endpoint | Descrição |
+|------|------|------|
+| POST | /users | Criar um novo usuário |
+| GET | /users | Listar todos os usuários |
+| GET | /users/{id} | Buscar usuário por ID |
+| PUT | /users/{id} | Atualizar usuário |
+| DELETE | /users/{id} | Remover usuário |
 
 ---
 
-### 🔹 Persistência de Dados
-- Mapeamento de entidades com JPA
-- Repositórios com Spring Data JPA
-- Operações de CRUD com banco de dados
+# 📥 Exemplo de Requisição
+
+### Criar usuário
+
+POST /users
+
+```json
+{
+  "nomeCompleto": "João Silva",
+  "email": "joao@email.com",
+  "senha": "senha1234"
+}
+```
+
+---
+
+# 📂 Estrutura do Projeto
+
+```
+src/main/java/com/paulo/usermanagementapi
+
+controller
+service
+repository
+entity
+dto
+exception
+```
+
+A aplicação segue uma **arquitetura em camadas**, separando responsabilidades entre API, regras de negócio e acesso a dados.
+
+---
+
+# ⚙️ Como executar o projeto
+
+### 1. Clonar o repositório
+
+```
+git clone https://github.com/seuusuario/user-management-api
+```
+
+### 2. Configurar o banco de dados
+
+Editar o arquivo:
+
+```
+src/main/resources/application.properties
+```
+
+Configurando usuário e senha do **MySQL**.
+
+### 3. Executar a aplicação
+
+```
+./mvnw spring-boot:run
+```
+
+A aplicação será iniciada em:
+
+```
+http://localhost:8080
+```
+
+---
+
+# 🎯 Objetivo do Projeto
+
+Este projeto foi desenvolvido com o objetivo de praticar:
+
+- Construção de **APIs REST com Spring Boot**
+- Organização de projetos backend em **arquitetura em camadas**
+- Integração com banco de dados usando **JPA e Hibernate**
+- Implementação de **CRUD completo**
+
+---
+
+# 🔮 Melhorias Futuras
+
+Algumas melhorias planejadas para evoluir o projeto:
+
+- Autenticação com **JWT**
+- Hash de senha com **BCrypt**
+- Documentação da API com **Swagger/OpenAPI**
+- Paginação na listagem de usuários
