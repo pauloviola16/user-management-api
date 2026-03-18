@@ -80,38 +80,6 @@ A aplicação segue uma **arquitetura em camadas**, separando responsabilidades 
 
 ---
 
-# ⚙️ Como executar o projeto
-
-### 1. Clonar o repositório
-
-```
-git clone https://github.com/seuusuario/user-management-api
-```
-
-### 2. Configurar o banco de dados
-
-Editar o arquivo:
-
-```
-src/main/resources/application.properties
-```
-
-Configurando usuário e senha do **MySQL**.
-
-### 3. Executar a aplicação
-
-```
-./mvnw spring-boot:run
-```
-
-A aplicação será iniciada em:
-
-```
-http://localhost:8080
-```
-
----
-
 # 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
@@ -123,11 +91,4 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 
 ---
 
-# 🔮 Melhorias Futuras
 
-Algumas melhorias planejadas para evoluir o projeto:
-
-- Autenticação com **JWT**
-- Hash de senha com **BCrypt**
-- Documentação da API com **Swagger/OpenAPI**
-- Paginação na listagem de usuários
