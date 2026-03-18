@@ -1,5 +1,6 @@
 # User Management API 👤
 
+![Status](https://img.shields.io/badge/Status-Completo-brightgreen)
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen)
 ![Spring Data JPA](https://img.shields.io/badge/Spring%20Data-JPA-blue)
