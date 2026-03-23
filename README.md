@@ -92,4 +92,7 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 
 ---
 
+## 👨‍💻 Autor
+
+**Paulo Viola** - [GitHub](https://github.com/pauloviola16)
 
