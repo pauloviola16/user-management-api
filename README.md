@@ -1,19 +1,18 @@
 # User Management API 👤
-
 ![Status](https://img.shields.io/badge/Status-Completo-brightgreen)
 ![Java](https://img.shields.io/badge/Java-17-orange)
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen)
 ![Spring Data JPA](https://img.shields.io/badge/Spring%20Data-JPA-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 ![Maven](https://img.shields.io/badge/Maven-Build-red)
+![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-brightgreen)
 
 API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
 Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados.
 
 ---
 
-# 🚀 Tecnologias
-
+## 🚀 Tecnologias
 - Java 17
 - Spring Boot
 - Spring Web
@@ -21,13 +20,13 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 - Hibernate
 - MySQL
 - Maven
+- SpringDoc OpenAPI (Swagger)
 
 ---
 
-# 📚 Funcionalidades
+## 📚 Funcionalidades
 
 ### 🔹 Gerenciamento de Usuários
-
 - Criação de usuários
 - Listagem de usuários
 - Busca de usuário por ID
@@ -36,8 +35,7 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 
 ---
 
-# 🔗 Endpoints da API
-
+## 🔗 Endpoints da API
 | Método | Endpoint | Descrição |
 |------|------|------|
 | POST | /users | Criar um novo usuário |
@@ -48,12 +46,22 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 
 ---
 
-# 📥 Exemplo de Requisição
+## 📄 Documentação
+
+A API conta com documentação interativa gerada automaticamente via **Swagger/OpenAPI**.
+
+Com o projeto rodando localmente, acesse:
+```
+http://localhost:8080/swagger-ui.html
+```
+Na página é possível visualizar todos os endpoints, os campos esperados em cada requisição e testar as chamadas diretamente pelo navegador.
+
+---
+
+## 📥 Exemplo de Requisição
 
 ### Criar usuário
-
 POST /users
-
 ```json
 {
   "nomeCompleto": "João Silva",
@@ -64,35 +72,32 @@ POST /users
 
 ---
 
-# 📂 Estrutura do Projeto
-
+## 📂 Estrutura do Projeto
 ```
 src/main/java/com/paulo/usermanagementapi
-
-controller
-service
-repository
-entity
-dto
-exception
+├── controller
+├── service
+├── repository
+├── entity
+├── dto
+├── exception
+└── config
 ```
-
 A aplicação segue uma **arquitetura em camadas**, separando responsabilidades entre API, regras de negócio e acesso a dados.
 
 ---
 
-# 🎯 Objetivo do Projeto
+## 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
-
 - Construção de **APIs REST com Spring Boot**
 - Organização de projetos backend em **arquitetura em camadas**
 - Integração com banco de dados usando **JPA e Hibernate**
 - Implementação de **CRUD completo**
+- Documentação de APIs com **Swagger/OpenAPI**
 
 ---
 
 ## 👨‍💻 Autor
-
 **Paulo Viola** - [GitHub](https://github.com/pauloviola16)
 
