@@ -1,12 +1,21 @@
 package com.paulo.usermanagementapi.dto;
 
 import com.paulo.usermanagementapi.entity.User;
+import io.swagger.v3.oas.annotations.media.Schema;
 
+@Schema(description = "Dados retornados de um usuário")
 public class UserResponseDTO {
 
+        @Schema(description = "ID único do usuário", example = "1")
         private Long id;
+
+        @Schema(description = "Nome completo do usuário", example = "Paulo Silva")
         private String nomeCompleto;
+
+        @Schema(description = "E-mail do usuário", example = "paulo@email.com")
         private String email;
+
+        @Schema(description = "Indica se o usuário está ativo", example = "true")
         private Boolean ativo;
 
         public UserResponseDTO(User user) {
