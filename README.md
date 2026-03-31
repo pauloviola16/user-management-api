@@ -13,6 +13,7 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 ---
 
 ## 🚀 Tecnologias
+
 - Java 17
 - Spring Boot
 - Spring Web
@@ -36,8 +37,9 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 ---
 
 ## 🔗 Endpoints da API
+
 | Método | Endpoint | Descrição |
-|------|------|------|
+|--------|----------|-----------|
 | POST | /users | Criar um novo usuário |
 | GET | /users | Listar todos os usuários |
 | GET | /users/{id} | Buscar usuário por ID |
@@ -54,6 +56,7 @@ Com o projeto rodando localmente, acesse:
 ```
 http://localhost:8080/swagger-ui.html
 ```
+
 Na página é possível visualizar todos os endpoints, os campos esperados em cada requisição e testar as chamadas diretamente pelo navegador.
 
 ---
@@ -72,6 +75,28 @@ POST /users
 
 ---
 
+## ▶️ Como rodar o projeto
+
+### 🐳 Com Docker
+```bash
+docker pull pauloviola/user-management-api
+```
+
+🔗 [Ver imagem no Docker Hub](https://hub.docker.com/repository/docker/pauloviola/user-management-api/)
+
+### 🔹 Sem Docker
+
+Pré-requisitos: Java 17+, Maven e MySQL configurados localmente.
+```bash
+git clone https://github.com/pauloviola16/user-management-api.git
+cd user-management-api
+./mvnw spring-boot:run
+```
+
+A aplicação estará disponível em: `http://localhost:8080`
+
+---
+
 ## 📂 Estrutura do Projeto
 ```
 src/main/java/com/paulo/usermanagementapi
@@ -83,6 +108,7 @@ src/main/java/com/paulo/usermanagementapi
 ├── exception
 └── config
 ```
+
 A aplicação segue uma **arquitetura em camadas**, separando responsabilidades entre API, regras de negócio e acesso a dados.
 
 ---
@@ -90,6 +116,7 @@ A aplicação segue uma **arquitetura em camadas**, separando responsabilidades 
 ## 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
+
 - Construção de **APIs REST com Spring Boot**
 - Organização de projetos backend em **arquitetura em camadas**
 - Integração com banco de dados usando **JPA e Hibernate**
@@ -99,5 +126,6 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 ---
 
 ## 👨‍💻 Autor
+
 **Paulo Viola** - [GitHub](https://github.com/pauloviola16)
 
