@@ -4,8 +4,8 @@
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-Framework-brightgreen)
 ![Spring Data JPA](https://img.shields.io/badge/Spring%20Data-JPA-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
-![Maven](https://img.shields.io/badge/Maven-Build-red)
-![Swagger](https://img.shields.io/badge/Swagger-OpenAPI-brightgreen)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-UI-85EA2D?logo=swagger&logoColor=black)
 
 API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
 Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados.
