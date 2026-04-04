@@ -69,7 +69,7 @@ POST /users
 {
   "nomeCompleto": "João Silva",
   "email": "joao@email.com",
-  "senha": "senha1234"
+  "senha": "MinhaSenha123@"
 }
 ```
 
