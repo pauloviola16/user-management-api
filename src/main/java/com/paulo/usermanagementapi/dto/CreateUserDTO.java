@@ -20,6 +20,10 @@ public class CreateUserDTO {
     @NotBlank(message = "Senha é obrigatória")
     private String senha;
 
+    public CreateUserDTO() {
+
+    }
+
     public String getNomeCompleto() { return nomeCompleto; }
 
     public void setNomeCompleto(String nomeCompleto) { this.nomeCompleto = nomeCompleto; }
@@ -32,4 +36,9 @@ public class CreateUserDTO {
 
     public void setSenha(String senha) { this.senha = senha; }
 
+    public CreateUserDTO(String nomeCompleto, String email, String senha) {
+        this.nomeCompleto = nomeCompleto;
+        this.email = email;
+        this.senha = senha;
+    }
 }

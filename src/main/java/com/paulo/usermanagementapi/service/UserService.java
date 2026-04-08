@@ -11,14 +11,14 @@ import com.paulo.usermanagementapi.dto.UserResponseDTO;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @Service
 public class UserService {
 
-    @Autowired
-    public UserRepository userRepository;
+    private final UserRepository userRepository;
 
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     public List<UserResponseDTO> findAll() {
         List<User> users = userRepository.findAll();
@@ -32,13 +32,15 @@ public class UserService {
            return new UserResponseDTO(user);
     }
 
-    public UserResponseDTO insert(CreateUserDTO dto){
+    public UserResponseDTO createUser(CreateUserDTO dto){
+        if (userRepository.findByEmail(dto.getEmail()).isPresent()){
+            throw new RuntimeException("Email já cadastrado");
+        }
         User user = new User();
 
         user.setNomeCompleto(dto.getNomeCompleto());
         user.setEmail(dto.getEmail());
         user.setSenhaHash(dto.getSenha());
-
         user.setAtivo(true);
         user.setDataCriacao(LocalDateTime.now());
 
@@ -63,7 +65,6 @@ public class UserService {
         }
         userRepository.deleteById(id);
     }
-
 
 
 }

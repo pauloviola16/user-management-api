@@ -34,8 +34,8 @@ public class UserController {
             @ApiResponse(responseCode = "409", description = "E-mail já cadastrado", content = @Content)
     })
     @PostMapping
-    public ResponseEntity<UserResponseDTO> insert(@Valid @RequestBody CreateUserDTO dto) {
-        UserResponseDTO user = userService.insert(dto);
+    public ResponseEntity<UserResponseDTO> create(@Valid @RequestBody CreateUserDTO dto) {
+        UserResponseDTO user = userService.createUser(dto);
         return ResponseEntity.status(HttpStatus.CREATED).body(user);
     }
 
