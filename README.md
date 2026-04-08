@@ -6,6 +6,8 @@
 ![MySQL](https://img.shields.io/badge/MySQL-Database-blue)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-UI-85EA2D?logo=swagger&logoColor=black)
+![JUnit](https://img.shields.io/badge/Test-JUnit%205-25A162?logo=junit5&logoColor=white)
+![Mockito](https://img.shields.io/badge/Mocking-Mockito-78A641?logo=java&logoColor=white)
 
 API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
 Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados e testes unitários.
