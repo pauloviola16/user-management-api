@@ -8,7 +8,7 @@
 ![Swagger](https://img.shields.io/badge/Swagger-UI-85EA2D?logo=swagger&logoColor=black)
 
 API REST desenvolvida com **Java e Spring Boot** para gerenciamento de usuários.  
-Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados.
+Este projeto foi criado com o objetivo de praticar a construção de **APIs backend organizadas**, utilizando arquitetura em camadas e integração com banco de dados e testes unitários.
 
 ---
 
@@ -22,6 +22,28 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 - MySQL
 - Maven
 - SpringDoc OpenAPI (Swagger)
+- JUnit 5
+- Mockito
+
+---
+
+## 📂 Estrutura do Projeto
+```
+src/main/java/com/paulo/usermanagementapi
+├── controller
+├── service
+├── repository
+├── entity
+├── dto
+├── exception
+└── config
+
+src/test/java/com/paulo/usermanagementapi
+└── service
+    └── UserServiceTest
+
+```
+A aplicação segue uma **arquitetura em camadas**, separando responsabilidades entre API, regras de negócio e acesso a dados.
 
 ---
 
@@ -45,6 +67,28 @@ Este projeto foi criado com o objetivo de praticar a construção de **APIs back
 | GET | /users/{id} | Buscar usuário por ID |
 | PUT | /users/{id} | Atualizar usuário |
 | DELETE | /users/{id} | Remover usuário |
+
+---
+
+## 🧪 Testes
+
+O projeto conta com testes unitários da camada de Service, cobrindo os principais fluxos da `UserService`.
+
+### 🔧 Ferramentas utilizadas
+
+- **JUnit 5** — estrutura de testes  
+- **Mockito** — mock do repositório para isolar a camada de serviço  
+
+### 📌 Cenários cobertos
+
+| Método        | Cenário                                      |
+|--------------|----------------------------------------------|
+| `createUser` | Criação bem-sucedida de usuário              |
+| `getAllUsers`| Retorno da lista de usuários                 |
+| `getUserById`| Busca por ID existente                       |
+| `getUserById`| Exceção ao buscar ID inexistente             |
+| `updateUser` | Atualização bem-sucedida de dados            |
+| `deleteUser` | Remoção de usuário existente                 |
 
 ---
 
@@ -97,22 +141,6 @@ A aplicação estará disponível em: `http://localhost:8080`
 
 ---
 
-## 📂 Estrutura do Projeto
-```
-src/main/java/com/paulo/usermanagementapi
-├── controller
-├── service
-├── repository
-├── entity
-├── dto
-├── exception
-└── config
-```
-
-A aplicação segue uma **arquitetura em camadas**, separando responsabilidades entre API, regras de negócio e acesso a dados.
-
----
-
 ## 🎯 Objetivo do Projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar:
@@ -122,6 +150,7 @@ Este projeto foi desenvolvido com o objetivo de praticar:
 - Integração com banco de dados usando **JPA e Hibernate**
 - Implementação de **CRUD completo**
 - Documentação de APIs com **Swagger/OpenAPI**
+- Testes unitários com JUnit 5 e Mockito
 
 ---
 
