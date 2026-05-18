@@ -1,0 +1,39 @@
+services:
+
+  # 🗄️ O banco de dados MySQL
+  db:
+    image: mysql:8.0
+    container_name: user-management-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql   # os dados ficam salvos mesmo se derrubar o container
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${DB_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 🚀 Sua API
+  api:
+    image: pauloviola/user-management-api:latest  # sua imagem do Docker Hub
+    container_name: user-management-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/user_management
+
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    depends_on:
+      db:
+        condition: service_healthy   # só liga a API quando o banco estiver pronto
+
+volumes:
+  mysql_data:   # volume que guarda os dados do banco
